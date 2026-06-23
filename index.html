@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오늘의 사주 운세</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: radial-gradient(ellipse at top, #1b2a5e 0%, #0d1330 55%, #070a1c 100%);
+      color: #f3f0e3;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .stars {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 20% 30%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 70% 20%, #ffe9a8 50%, transparent),
+        radial-gradient(1.5px 1.5px at 40% 70%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 85% 60%, #ffe9a8 50%, transparent),
+        radial-gradient(1px 1px at 55% 45%, #fff 50%, transparent),
+        radial-gradient(1.5px 1.5px at 10% 80%, #fff 50%, transparent);
+      opacity: 0.6;
+    }
+    .wrap {
+      position: relative; z-index: 1;
+      max-width: 760px; margin: 0 auto; padding: 56px 24px 72px;
+    }
+    header { text-align: center; margin-bottom: 48px; }
+    .moon {
+      font-size: 52px; line-height: 1; margin-bottom: 18px;
+      filter: drop-shadow(0 0 14px rgba(243,205,106,0.55));
+    }
+    h1 {
+      font-size: 2.1rem; color: #f3cd6a; letter-spacing: 1px;
+      text-shadow: 0 0 18px rgba(243,205,106,0.35); margin-bottom: 14px;
+    }
+    .tagline { font-size: 1.1rem; color: #d6d2c2; }
+    section {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(243,205,106,0.22);
+      border-radius: 18px; padding: 28px 26px; margin-bottom: 28px;
+      backdrop-filter: blur(4px);
+    }
+    h2 {
+      font-size: 1.25rem; color: #f3cd6a; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    ul.features { list-style: none; }
+    ul.features li {
+      padding: 10px 0 10px 30px; position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    ul.features li:last-child { border-bottom: none; }
+    ul.features li::before {
+      content: "\2726"; position: absolute; left: 0; top: 10px;
+      color: #f3cd6a;
+    }
+    .cta { text-align: center; margin-top: 8px; }
+    .cta a {
+      display: inline-block; margin: 8px;
+      padding: 12px 26px; border-radius: 999px;
+      background: linear-gradient(135deg, #f3cd6a, #d9a93c);
+      color: #1b1402; font-weight: 700; text-decoration: none;
+      box-shadow: 0 6px 20px rgba(243,205,106,0.28);
+    }
+    .cta a.ghost {
+      background: transparent; color: #f3cd6a;
+      border: 1px solid rgba(243,205,106,0.5); box-shadow: none;
+    }
+    footer {
+      text-align: center; margin-top: 40px;
+      color: #9a9bb5; font-size: 0.88rem;
+    }
+    footer a { color: #f3cd6a; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="wrap">
+    <header>
+      <div class="moon">&#127769;</div>
+      <h1>오늘의 사주 운세</h1>
+      <p class="tagline">생년월일과 출생시간으로 보는, 오늘 하루의 사주 풀이</p>
+    </header>
+
+    <section>
+      <h2>&#10024; 한줄 소개</h2>
+      <p>전통 만세력 엔진을 기기 안에서 직접 계산하여, 당신의 사주팔자와 오늘의 운세를
+      서버 없이 즉시 풀어 드리는 사주 운세 앱입니다. 입력한 정보는 기기 밖으로
+      나가지 않습니다.</p>
+    </section>
+
+    <section>
+      <h2>&#9733; 주요 기능</h2>
+      <ul class="features">
+        <li>온디바이스 만세력 엔진으로 사주팔자(연·월·일·시주) 산출</li>
+        <li>오행 분포와 십성 분석으로 보는 기질 풀이</li>
+        <li>오늘의 운세 · 일진 기반 하루 길흉 안내</li>
+        <li>AI 콘텐츠로 풀어 주는 자연스러운 운세 해설</li>
+        <li>완전 서버리스 — 인터넷 없이도 핵심 기능 동작</li>
+        <li>입력 정보(생년월일·출생시간)는 내 기기에만 저장</li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <a href="privacy.html">개인정보처리방침</a>
+      <a class="ghost" href="mailto:wowpressdev@gmail.com">문의하기</a>
+    </section>
+
+    <footer>
+      <p>제작 · 운영 : CIESoft</p>
+      <p>문의 : <a href="mailto:wowpressdev@gmail.com">wowpressdev@gmail.com</a></p>
+      <p>&copy; 2026 CIESoft. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
